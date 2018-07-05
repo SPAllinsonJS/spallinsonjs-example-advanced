@@ -63,6 +63,10 @@ _A_.Settings = {
             view: 'components/privacy/privacy.html',
             controller: 'components/privacy/privacy.js',
             pageTitle: 'your app - Privacy'
+        },
+        'PrivacyContent': {
+            view: 'components/privacy/privacy-content/privacy-content.html',
+            controller: 'components/privacy/privacy-content/privacy-content.js'
         }
     },
 
