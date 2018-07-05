@@ -13,6 +13,12 @@ Topics include: Services, Singletons, Localization (Locale), Plugins, Notificati
 
 
 
+## See it in Action
+
+[www.spallinsonjs.com/example-apps/advanced](http://spallinsonjs.com/example-apps/advanced)
+
+
+
 ## App Architecture
 
 The app is made up of the following files:
