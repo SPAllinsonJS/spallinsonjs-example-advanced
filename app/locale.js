@@ -16,6 +16,8 @@ _A_.Locale.localizations = {
 		'logout': 'Logout',
 		'logoutConfirm': 'Are you sure you wish to logout?',
 
+		'privacyPolicy': 'Privacy Policy',
+
 		'example': 'Color'
 	},
 	'en-CA': {
@@ -33,6 +35,13 @@ _A_.Locale.localizations = {
 		'privacy': 'Privacy',
 		'legal': 'Legal',
 		'logout': 'Logout',
-		'logoutConfirm': 'Are you sure you wish to logout?'
-    }
+		'logoutConfirm': 'Are you sure you wish to logout?',
+
+		'privacyPolicy': 'Privacy Policy',
+
+		'example': 'Color'
+	},
+	'fr-CA': {
+		'example': 'Colour'
+	},
 };

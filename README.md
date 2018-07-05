@@ -121,11 +121,61 @@ This is the v1.2.0 release of SPAllinsonJS-Alert. Nothing to see here.
 
 #### spallinsonjs-lightbox/*
 
-This is the v1.2.7 release of SPAllinsonJS-Lightbox. Nothing to see here.
+This is the v1.2.7 release of SPAllinsonJS-Lightbox.
+
+Lightbox has a settings file (`spallinsonjs-lightbox/lightbox-settings.js`) which helps you override styles.
 
 #### spallinsonjs-storage/*
 
-This is the v1.2.0 release of SPAllinsonJS-Storage. Nothing to see here.
+This is the v1.2.0 release of SPAllinsonJS-Storage.
+
+Storage has a settings file (`spallinsonjs-storage/storage-settings.js`) that allows you to customize a message to the user if storage is not supported by their browser.
+
+
+
+## Plugins
+
+This app uses all three of the current SPAllinsonJS plugins available. They are imported in `index.html`.
+
+#### Alert
+
+Alert displays a banner notification to the user.
+
+The `Login` component displays an alert if you don't enter a username or password, try it out.
+
+The code for that is in it's controller's (`components/login/login.js`) `loginPressed` method.
+
+Note: `// guard` is a concept I use from iOS/Swift development. The idea is to handle all of the sad path upfront, then execute the happy path if all checks pass. There are tonnes of `// guard` in the SPAllinsonJS source code! The debug console is going to let you know if you pass null (etc.) into any of the `_A_` APIs :)
+
+#### Lightbox
+
+Lightbox is a full screen modal you can display a component in.
+
+The `Privacy` component's view opens a lightbox to display the content.
+
+The `PrivacyContent` component is displayed by the lightbox.
+
+A close button has been added to the view so the user can escape the lightbox. Closing the lightbox is as simple as `_A_.Lightbox.close()`.
+
+You can also dismiss the modal by pressing the `esc` key.
+
+#### Storage
+
+Storage allows you to store and persist data.
+
+###### _A_.Storage.Session
+
+Stores data for the lifetime of the app.
+
+###### _A_.Storage.Persistent
+
+Stores data across different app sessions.
+
+i.e. if you close the browser and reopen, the data will persist!
+
+The `UserManager` singleton (`singletons/userManager.js`) acts as a data store and uses `_A_.Storage.Persistent` to save the auth token and user data.
+
+Note: to save an object to storage, you'll need to convert it to a JSON string. Likewise you'll have to JSON parse it into an object when reading.
 
 
 
