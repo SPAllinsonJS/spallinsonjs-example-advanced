@@ -1,0 +1,54 @@
+
+
+@keyframes openDrawer { from { left: -281px; } to { left: 0px; } }
+@keyframes closeDrawer { from { left: 0px; } to { left: -281px; } }
+
+.drawer {
+    position: absolute;
+    top: 64px;
+    width: 281px;
+    height: calc(100% - 64px);
+    background-color: #666;
+    border-right: #333 solid 1px;
+    z-index: 9;
+}
+
+.drawer.opening {
+    left: -281px;
+    animation: openDrawer linear 0.3s;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+}
+
+.drawer.opened {
+    left: 0px;
+}
+
+.drawer.closing {
+    left: 0px;
+    animation: closeDrawer linear 0.3s;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+}
+
+.drawer.closed {
+    left: -281px;
+}
+
+
+.drawer a {
+    display: block;
+    height: 50px;
+    font-size: 12px;
+    line-height: 50px;
+    color: orange;
+    text-decoration: none;
+    background-color: #555;
+    padding: 0 0 0 10px;
+    border-bottom: 1px solid #333;
+}
+
+.drawer a:hover {
+    background-color: #444;
+    color: #FFF;
+}

@@ -1,0 +1,25 @@
+
+
+.mini-profile {
+    position: relative;
+    width: 100%;
+    color: #FFF;
+    background-color: #000;
+    padding: 10px;
+}
+
+.mini-profile .username {
+    display: block;
+    font-size: 20px;
+}
+
+.mini-profile .name {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.mini-profile .age {
+    display: block;
+    font-size: 12px;
+    color: #999;
+}

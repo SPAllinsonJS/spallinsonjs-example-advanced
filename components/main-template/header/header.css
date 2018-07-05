@@ -1,0 +1,39 @@
+
+
+.header {
+    height: 64px;
+    background-color: #333;
+}
+
+.header .hamburger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 44px;
+    height: 44px;
+    background-image: url('images/hamburger.png');
+    cursor: pointer;
+}
+
+.header .hamburger.disabled {
+    opacity: 0.3;
+}
+
+.header .logo {
+    display: block;
+    font-size: 25px;
+    line-height: 54px;
+    text-align: center;
+    color: #FFF;
+    margin: 5px auto 0;
+}
+
+
+
+/* retina support */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .header .hamburger {
+        background-image: url('images/hamburger@2x.png');
+    }
+}

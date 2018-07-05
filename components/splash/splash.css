@@ -1,0 +1,24 @@
+
+
+.splash-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  height: 560px;
+  margin-top: -280px;
+  margin-left: -280px;
+  background-size: cover;
+}
+
+
+/* responsive design */
+
+@media (min-width: 0px) and (max-width: 599px) {
+  .splash-image {
+    width: 280px;
+    height: 280px;
+    margin-top: -200px;
+    margin-left: -140px;
+  }
+}
