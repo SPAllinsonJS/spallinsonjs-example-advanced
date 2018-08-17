@@ -6,28 +6,18 @@ _A_.Controllers.Drawer = function () {
 
     var self = this;
 
-    this.me;
-    this.model;
-
 
 
     // lifecycle methods
 
-    this.init = function (i, data) {
-        self.me = i;
-        self.model = data;
-
+    this.init = function () {
         self.model.drawerState = 'closed';
-
-        _A_.Note.register('HAMBURGER_PRESSED', self.me, 'handleHamburgerPressed');
+        _A_.Note.register('HAMBURGER_PRESSED', self, self.handleHamburgerPressed);
     };
 
     this.dealloc = function (callback) {
-        _A_.Note.deregisterFromAll(self.me);
+        _A_.Note.deregisterFromAll(self);
         return callback();
-    };
-
-    this.viewDidLoad = function () {
     };
 
 
@@ -49,7 +39,7 @@ _A_.Controllers.Drawer = function () {
 
     this.closeDrawer = function () {
         self.model.drawerState = 'closing';
-        _A_.Repaint(self.me);
+        _A_.Repaint(self);
         setTimeout(function () {
             self.model.drawerState = 'closed';
             _A_.Note.fire('DRAWER_CLOSED');
@@ -74,7 +64,7 @@ _A_.Controllers.Drawer = function () {
 
     var openDrawer = function () {
         self.model.drawerState = 'opening';
-        _A_.Repaint(self.me);
+        _A_.Repaint(self);
         setTimeout(function () {
             self.model.drawerState = 'open';
         }, 300);

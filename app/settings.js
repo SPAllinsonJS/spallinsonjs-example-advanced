@@ -33,40 +33,48 @@ _A_.Settings = {
             pageTitle: 'your app - Login',
             services: [
                 'ApiManager'
-            ]
+            ],
+            preload: true
         },
 
         'MainTemplate': {
             view: 'components/main-template/main-template.html',
-            controller: 'components/main-template/main-template.js'
+            controller: 'components/main-template/main-template.js',
+            preload: true
         },
         'Header': {
             view: 'components/main-template/header/header.html',
-            controller: 'components/main-template/header/header.js'
+            controller: 'components/main-template/header/header.js',
+            preload: true
         },
         'Drawer': {
             view: 'components/main-template/drawer/drawer.html',
-            controller: 'components/main-template/drawer/drawer.js'
+            controller: 'components/main-template/drawer/drawer.js',
+            preload: true
         },
         'MiniProfile': {
             view: 'components/main-template/drawer/mini-profile/mini-profile.html',
-            controller: 'components/main-template/drawer/mini-profile/mini-profile.js'
+            controller: 'components/main-template/drawer/mini-profile/mini-profile.js',
+            preload: true
         },
 
         'Dashboard': {
             view: 'components/dashboard/dashboard.html',
             controller: 'components/dashboard/dashboard.js',
-            pageTitle: 'your app - Dashboard'
+            pageTitle: 'your app - Dashboard',
+            preload: true
         },
 
         'Privacy': {
             view: 'components/privacy/privacy.html',
             controller: 'components/privacy/privacy.js',
-            pageTitle: 'your app - Privacy'
+            pageTitle: 'your app - Privacy',
+            preload: true
         },
         'PrivacyContent': {
             view: 'components/privacy/privacy-content/privacy-content.html',
-            controller: 'components/privacy/privacy-content/privacy-content.js'
+            controller: 'components/privacy/privacy-content/privacy-content.js',
+            preload: true
         }
     },
 
@@ -91,7 +99,9 @@ _A_.Settings = {
 
     routeRules: [
         {
-            condition: 'UserManager.isLoggedIn()',
+            condition: function () {
+                return UserManager.isLoggedIn();
+            },
             fallback: 'login',
             routes: [
                 'main',
@@ -100,7 +110,9 @@ _A_.Settings = {
             ]
         },
         {
-            condition: '!UserManager.isLoggedIn()',
+            condition: function () {
+                return !UserManager.isLoggedIn();
+            },
             fallback: 'main/dashboard',
             routes: [
                 'login'

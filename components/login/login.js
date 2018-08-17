@@ -6,28 +6,15 @@ _A_.Controllers.Login = function (ApiManager) {
 
     var self = this;
 
-    this.me;
-    this.model;
-
 
 
     // lifecycle methods
 
-    this.init = function (i, data) {
-        self.me = i;
-        self.model = data;
-
+    this.init = function () {
         self.model = {
             username: '',
             password: ''
         };
-    };
-
-    this.dealloc = function (callback) {
-        return callback();
-    };
-
-    this.viewDidLoad = function () {
     };
 
 

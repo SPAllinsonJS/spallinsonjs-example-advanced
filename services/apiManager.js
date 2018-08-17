@@ -6,7 +6,7 @@ _A_.Services.ApiManager = function () {
 
     this.login = function (username, password, successCallback, errorCallback) {
         // // This is where you would make an API call
-        // _A_.Ajax(
+        // _A_.Ajax.request(
         //     'GET',
         //     'https://api.yourapp.com/login?username='+username+'&password='+password+'',
         //     null,

@@ -1,6 +1,6 @@
 # SPAllinsonJS-Alert
 
-v1.2.0
+v1.2.1
 
 
 
@@ -20,7 +20,7 @@ All documentation can be found here:
 ## Get Started With SPAllinsonJS
 
 Check out the sample apps here:
-[My First SPAllinsonJS App](http://spallinsonjs.com/#/home/developer/myfirstapp!)
+[Getting Started](http://spallinsonjs.com/#/home/developer/getting-started)
 
 
 

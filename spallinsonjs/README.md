@@ -1,6 +1,6 @@
 # SPAllinsonJS
 
-v1.3.4
+v1.4.0
 
 
 
@@ -138,11 +138,40 @@ Temporarily and Permanently store and retrieve data (key/values)
 
 ## Revision History
 
+#### v1.4.0
+
+- BREAKING: RouteRules condition now takes a function that return a bool
+
+- BREAKING: _A_.Ajax now has methods: request, get, post, put, delete and patch
+
+- BREAKING: _A_.Repaint, _A_.Repeat, _A_.Append, _A_.Rebind and _A_.Component all now take a component instance (i.e. self instead of self.me)
+
+- BREAKING: _A_.Note now takes a component instance and a function (i.e. self instead of self.me, and self.methodName instead of 'methodName')
+
+- BREAKING: _A_.MemoryManagement interface change
+
+- BREAKING: Components are automatically init'd with `me` and `model` properties
+
+- BREAKING: Component lifecycle methods are now `init`, `viewDidAppear` and `dealloc`
+
+- Major performance enhancements
+
+- Component lifecycle methods are now optional
+
+- _A_.Settings.components['ComponentName'].view can now take a function that returns a string
+
+- Many _A_.Settings keys are now optional
+
+- Debug Console Ui and performance enhancements
+
 #### v1.3.4
 
 - _A_.Ajax now errors out upon a 500
+
 - Repeat over empty array now clears container
+
 - Complex Go/Repaint cycles (MVVM) bugfixes
+
 - _A_Content reverted back to `position: absolute` which fixes `'fade'` for `'app'`
 
 #### v1.3.3
@@ -271,9 +300,3 @@ All documentation can be found on the official site: [www.spallinsonjs.com](http
 ## Copyright
 
 All content &copy; [Chris J. Allinson](http://www.allinson.ca) 1996 - Present. All rights reserved.
-
-
-
-## License
-
-[EULA](LICENSE)
