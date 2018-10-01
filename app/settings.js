@@ -33,48 +33,40 @@ _A_.Settings = {
             pageTitle: 'your app - Login',
             services: [
                 'ApiManager'
-            ],
-            preload: true
+            ]
         },
 
         'MainTemplate': {
             view: 'components/main-template/main-template.html',
-            controller: 'components/main-template/main-template.js',
-            preload: true
+            controller: 'components/main-template/main-template.js'
         },
         'Header': {
             view: 'components/main-template/header/header.html',
-            controller: 'components/main-template/header/header.js',
-            preload: true
+            controller: 'components/main-template/header/header.js'
         },
         'Drawer': {
             view: 'components/main-template/drawer/drawer.html',
-            controller: 'components/main-template/drawer/drawer.js',
-            preload: true
+            controller: 'components/main-template/drawer/drawer.js'
         },
         'MiniProfile': {
             view: 'components/main-template/drawer/mini-profile/mini-profile.html',
-            controller: 'components/main-template/drawer/mini-profile/mini-profile.js',
-            preload: true
+            controller: 'components/main-template/drawer/mini-profile/mini-profile.js'
         },
 
         'Dashboard': {
             view: 'components/dashboard/dashboard.html',
             controller: 'components/dashboard/dashboard.js',
-            pageTitle: 'your app - Dashboard',
-            preload: true
+            pageTitle: 'your app - Dashboard'
         },
 
         'Privacy': {
             view: 'components/privacy/privacy.html',
             controller: 'components/privacy/privacy.js',
-            pageTitle: 'your app - Privacy',
-            preload: true
+            pageTitle: 'your app - Privacy'
         },
         'PrivacyContent': {
             view: 'components/privacy/privacy-content/privacy-content.html',
-            controller: 'components/privacy/privacy-content/privacy-content.js',
-            preload: true
+            controller: 'components/privacy/privacy-content/privacy-content.js'
         }
     },
 
