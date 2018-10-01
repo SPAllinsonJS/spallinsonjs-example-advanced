@@ -91,7 +91,9 @@ _A_.Settings = {
 
     routeRules: [
         {
-            condition: 'UserManager.isLoggedIn()',
+            condition: function () {
+                return UserManager.isLoggedIn();
+            },
             fallback: 'login',
             routes: [
                 'main',
@@ -100,7 +102,9 @@ _A_.Settings = {
             ]
         },
         {
-            condition: '!UserManager.isLoggedIn()',
+            condition: function () {
+                return !UserManager.isLoggedIn();
+            },
             fallback: 'main/dashboard',
             routes: [
                 'login'

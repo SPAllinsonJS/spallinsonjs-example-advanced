@@ -6,28 +6,18 @@ _A_.Controllers.Header = function () {
 
     var self = this;
 
-    this.me;
-    this.model;
-
 
 
     // lifecycle methods
 
-    this.init = function (i, data) {
-        self.me = i;
-        self.model = data;
-
+    this.init = function () {
         self.model.hamburgerEnabled = true;
-
-        _A_.Note.register('DRAWER_CLOSED', self.me, 'enableHamburger');
+        _A_.Note.register('DRAWER_CLOSED', self, self.enableHamburger);
     };
 
     this.dealloc = function (callback) {
-        _A_.Note.deregisterFromAll(self.me);
+        _A_.Note.deregisterFromAll(self);
         return callback();
-    };
-
-    this.viewDidLoad = function () {
     };
 
 
@@ -36,7 +26,7 @@ _A_.Controllers.Header = function () {
 
     this.hamburgerPressed = function () {
         self.model.hamburgerEnabled = false;
-        _A_.Repaint(self.me);
+        _A_.Repaint(self);
         _A_.Note.fire('HAMBURGER_PRESSED');
     };
 
@@ -46,6 +36,6 @@ _A_.Controllers.Header = function () {
 
     this.enableHamburger = function () {
         self.model.hamburgerEnabled = true;
-        _A_.Repaint(self.me);
+        _A_.Repaint(self);
     };
 };

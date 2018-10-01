@@ -1,7 +1,7 @@
 
 # SPAllinsonJS - Advanced App
 
-v1.3.4
+v1.4.0
 
 
 
@@ -73,7 +73,7 @@ You can apply specific access rules to groups of routes using `routeRules`.
 
 `settings.js` holds a good example of restricting access to any route that the user needs to be logged in to access.
 
-Note: the condition is a String! It will be evaluated, and there is excellent error handling via the debug console!
+Note: `condition` takes a function that returns a boolean.
 
 ###### _A_.Settings.services
 
@@ -87,9 +87,9 @@ An example of this is the `Login` component:
 
 1. Notice in `settings.js` where the `Login` component is registered. There is a key called `services`.
 
-2. Notice at the very to of the `'Login` components controller (`components/login/login.js`) where it says `ApiManager`. Services will be passed into the component via this parameter!
+2. Notice at the very top of the `'Login` components controller (`components/login/login.js`) where it says `ApiManager`. Services will be passed into the component via this parameter!
 
-Notice the usage of `ApiManager` in the `loginPressed` method of the `Login` component.
+3. Notice the usage of `ApiManager` in the `loginPressed` method.
 
 ###### _A_.Settings.singletons
 
@@ -97,7 +97,9 @@ Singletons are instantiated at launch, live throughout the entire app lifecycle,
 
 You register singletons as shown in `settings.js`.
 
-Notice the usage of `UserManager` in the `loginPressed` method of the `Login` component.
+An example of this is the `Login` component:
+
+1. Notice the usage of `UserManager` in the `loginPressed` method.
 
 #### assets/*
 
@@ -119,21 +121,21 @@ The `UserManager` singleton.
 
 #### spallinsonjs/*
 
-This is the v1.3.4 release of SPAllinsonJS. Nothing to see here.
+This is the v1.4.0 release of SPAllinsonJS. Nothing to see here.
 
 #### spallinsonjs-alert/*
 
-This is the v1.2.0 release of SPAllinsonJS-Alert. Nothing to see here.
+This is the v1.2.1 release of SPAllinsonJS-Alert. Nothing to see here.
 
 #### spallinsonjs-lightbox/*
 
-This is the v1.2.7 release of SPAllinsonJS-Lightbox.
+This is the v1.2.8 release of SPAllinsonJS-Lightbox.
 
 Lightbox has a settings file (`spallinsonjs-lightbox/lightbox-settings.js`) which helps you override styles.
 
 #### spallinsonjs-storage/*
 
-This is the v1.2.0 release of SPAllinsonJS-Storage.
+This is the v1.4.0 release of SPAllinsonJS-Storage.
 
 Storage has a settings file (`spallinsonjs-storage/storage-settings.js`) that allows you to customize a message to the user if storage is not supported by their browser.
 
@@ -193,17 +195,15 @@ The `Header` component's `hamburgerPressed()` method "fires" a notification with
 
 The `Drawer` component "registers" to listen for a notification with name `'HAMBURGER_PRESSED'` and fires it's `handleHamburgerPressed` method in response.
 
-Note: `_A_.Note.register()` currently takes a String as it's 3rd argument. Simply use the method's name, and don't follow it with a `()`. SPAllinsonJS will inject any data passed via a single parameter.
-
 The `Drawer` component "deregisters" from all notifications in it's `dealloc()` method. The `Header` component does not need to deregister as it only fires notifications.
 
 
 
 ## Ajax
 
-The `ApiManager` service has a commented out example of using `_A_.Ajax()` to make an HTTP Request.
+The `ApiManager` service has a commented out example of using `_A_.Ajax.request()` to make an HTTP Request.
 
-`_A_.Ajax()` takes a few parameters:
+`_A_.Ajax.request()` takes a few parameters:
 - method
 - url
 - headers array
@@ -211,9 +211,16 @@ The `ApiManager` service has a commented out example of using `_A_.Ajax()` to ma
 - success callback
 - error callback
 
+There are also RESTful helper functions that simply handle the method for you:
+- `_A_.Ajax.get()`
+- `_A_.Ajax.post()`
+- `_A_.Ajax.put()`
+- `_A_.Ajax.delete()`
+- `_A_.Ajax.patch()`
 
 
-## Bundling
+
+## Bundling / Segmenting
 
 The app currently does not preload any of the components.
 
@@ -221,9 +228,9 @@ This means that SPAllinsonJS will download the `.js` files on the fly (during ro
 
 If you were to compile all of your components into one javascript file (`bundle.min.js` or whatnot), you can use that as the value for `controller` when you register each of your components in `settings.js`.
 
-SPAllinsonJS skips scripts it has in memory, so it would only ever load said bundle once.
+SPAllinsonJS skips scripts it has in memory, so it would only ever load said bundle once!
 
-You can thus separate or segment your app into pieces!
+You can thus separate (or segment) your app into pieces!
 
 An example usage would to bundle all of the most used components into one bundle you preload, then keep other less used stuff like privacy, terms and conditions, etc. in another bundle(s) and only if the user ever visited them would they be downloaded :)
 

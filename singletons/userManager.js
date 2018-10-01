@@ -19,7 +19,7 @@ _A_.Singletons.UserManager = function () {
     };
 
     this.logout = function () {
-        _A_.Storage.Persistent.remove('AUTH_TOKEN');
+        _A_.Storage.Persistent.delete('AUTH_TOKEN');
     };
 
     // user
@@ -47,6 +47,6 @@ _A_.Singletons.UserManager = function () {
     };
 
     this.deleteUser = function () {
-        _A_.Storage.Persistent.remove('USER');
+        _A_.Storage.Persistent.delete('USER');
     };
 };
