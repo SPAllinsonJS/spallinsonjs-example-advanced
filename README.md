@@ -1,7 +1,7 @@
 
 # SPAllinsonJS - Advanced App
 
-v1.4.0
+v1.4.2
 
 
 
@@ -121,7 +121,7 @@ The `UserManager` singleton.
 
 #### spallinsonjs/*
 
-This is the v1.4.0 release of SPAllinsonJS. Nothing to see here.
+This is the v1.4.2 release of SPAllinsonJS. Nothing to see here.
 
 #### spallinsonjs-alert/*
 

@@ -1,6 +1,6 @@
 # SPAllinsonJS
 
-v1.4.0
+v1.4.2
 
 
 
@@ -34,17 +34,17 @@ Allow users to bookmark the page (route) they are on
 
 #### Services & Singletons
 
-Create reusable services and singletons
+Create reusable Services and Singletons
 
 
 #### Note
 
-Pass messages (w/ optional data) around between controllers within your application
+Pass messages (w/ optional data) around between Controllers within your application
 
 
 #### Data Binding (One-Way)
 
-Bind data from your components' models to their views
+Bind data from your Components' models to their Views
 
 
 #### Data Rebinding
@@ -54,17 +54,17 @@ Manually rebind bound data (whenever you know the model has changed)
 
 #### Repaint
 
-Manually update a component's view (whenever you know the model has changed)
+Manually update a Component's View (whenever you know the model has changed)
 
 
 #### Component
 
-Inject an entire component into a view
+Inject an entire Component into a View
 
 
 #### Repeat
 
-Repeat a component over an array of data
+Repeat a Component over an array of data
 
 
 #### Eval
@@ -82,6 +82,11 @@ Easily perform, handle and cancel HTTP Requests (with optional caching)
 Specify language specific content using key/values
 
 
+#### Testing
+
+Unit test your app using `SPAllinsonJS-v1.4.2--test.min.js`
+
+
 #### Splash Screen
 
 Initial loading page presented to the user upon launch
@@ -89,12 +94,12 @@ Initial loading page presented to the user upon launch
 
 #### Preloading
 
-While the splash screen is being displayed, have SPAllinsonJS preload specific components (i.e. their associated html, css, images and controller)
+While the Splash Screen is being displayed, have SPAllinsonJS preload specific Components (i.e. their associated html, css, images and js)
 
 
 #### Offline
 
-Your app can work offline forever after just one initial splash screen load
+Your app can work offline forever after just one initial Splash Screen load
 
 
 #### Debug Console
@@ -137,6 +142,16 @@ Temporarily and Permanently store and retrieve data (key/values)
 
 
 ## Revision History
+
+#### v1.4.2
+
+- Major improvements to routing sequencing
+
+- Fade in/out speed now customizable via _A_.Settings.fadeSpeedMills
+
+#### v1.4.1
+
+- Apps now testable using `SPAllinsonJS-v1.4.1--test.min.js`
 
 #### v1.4.0
 
