@@ -1,6 +1,6 @@
 # SPAllinsonJS
 
-v1.4.2
+v1.4.3
 
 
 
@@ -84,7 +84,7 @@ Specify language specific content using key/values
 
 #### Testing
 
-Unit test your app using `SPAllinsonJS-v1.4.2--test.min.js`
+Unit test your app using `SPAllinsonJS-v1.4.3--test.min.js`
 
 
 #### Splash Screen
@@ -119,7 +119,7 @@ Vast!
 
 #### Bundling
 
-Support for JS and CSS bundles to help reduce server calls, and segment your app as you choose
+Support for HTML, CSS and JS bundles to help reduce server calls, and segment your app as you choose
 
 
 
@@ -142,6 +142,10 @@ Temporarily and Permanently store and retrieve data (key/values)
 
 
 ## Revision History
+
+#### v1.4.3
+
+- Added view bundling support
 
 #### v1.4.2
 
@@ -308,10 +312,10 @@ Temporarily and Permanently store and retrieve data (key/values)
 
 #### Docs
 
-All documentation can be found on the official site: [www.spallinsonjs.com](http://www.spallinsonjs.com)
+All documentation can be found on the official site: [www.spallinsonjs.com](https://www.spallinsonjs.com)
 
 
 
 ## Copyright
 
-All content &copy; [Chris J. Allinson](http://www.allinson.ca) 1996 - Present. All rights reserved.
+All content &copy; [Chris J. Allinson](https://www.allinson.ca) 1996 - Present. All rights reserved.
