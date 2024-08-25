@@ -1,0 +1,108 @@
+{
+    "license": "EULA",
+    "author": "Christopher James Allinson <allinson.ca@hotmail.com>",
+    "contributors": [
+      {
+        "name": "Christopher James Allinson",
+        "email": "allinson.ca@hotmail.com",
+        "url": "https://www.allinson.ca"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Christopher James Allinson",
+        "email": "allinson.ca@hotmail.com"
+      }
+    ],
+  
+    "name": "spallinsonjs",
+    "version": "1.4.3",
+    "description": "A Web App Framework",
+    "keywords": [
+      "mvc",
+      "model view controller",
+      "model-view-controller",
+      "mvvm",
+      "model view viewmodel",
+      "model-view-viewmodel",
+      "spa",
+      "single page app",
+      "single page application",
+      "single page web app",
+      "single page web application",
+      "single page webapp",
+      "webapp",
+      "web app",
+      "website",
+      "web site",
+      "framework",
+      "route",
+      "router",
+      "routing",
+      "query",
+      "query string",
+      "deeplink",
+      "deeplinking",
+      "bookmark",
+      "bookmarking",
+      "history",
+      "singleton",
+      "singletons",
+      "service",
+      "services",
+      "repaint",
+      "bind",
+      "binding",
+      "data binding",
+      "repeat",
+      "notification",
+      "notifications",
+      "ajax",
+      "splash screen",
+      "preloading",
+      "offline",
+      "locale",
+      "localization",
+      "localisation",
+      "alerts",
+      "lightbox",
+      "storage",
+      "logging",
+      "unit test",
+      "testing"
+    ],
+  
+    "homepage": "https://www.spallinsonjs.com",
+    "bugs": {
+      "url": "https://www.spallinsonjs.com",
+      "email": "spallinsonjs@outlook.com"
+    },
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+  
+    "files": [
+      "LICENSE",
+      "README.md",
+      "SPAllinsonJS-v1.4.3.min.js",
+      "SPAllinsonJS-v1.4.3.min.css",
+      "SPAllinsonJS-v1.4.3--debug.min.js",
+      "SPAllinsonJS-v1.4.3--debug.min.css",
+      "SPAllinsonJS-v1.4.3--test.min.js"
+    ],
+    
+    "main": "",
+    "scripts": {
+      "start": "",
+      "test": ""
+    },
+    
+    "dependencies": {
+    },
+    "devDependencies": {
+    },
+    
+    "private": false
+}
+  

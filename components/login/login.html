@@ -7,12 +7,14 @@
         <span class="logo">your app</span>
         
         <span class="input-title">[L: username ]</span>
-        <input type="text" onkeyup="_C_.usernameChanged(this)" />
+        <input type="text" name="username" placeholder="Enter your username"
+            value="" onkeyup="_C_.usernameChanged(this)" autocomplete="your-app username" />
         
         <span class="input-title">[L: password ]</span>
-        <input type="password" onkeyup="_C_.passwordChanged(this)" />
+        <input type="password" name="password" placeholder="Enter your password"
+            value="" onkeyup="_C_.passwordChanged(this)" />
         
-        <button onclick="_C_.loginPressed()">[L: login ]</button>
+        <button title="Login" type="submit" onclick="_C_.loginPressed()">[L: login ]</button>
 
     </div>
 
