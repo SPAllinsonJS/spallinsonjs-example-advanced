@@ -1,7 +1,7 @@
 
 # SPAllinsonJS - Advanced App
 
-v1.4.2
+v1.4.3
 
 
 
@@ -15,7 +15,7 @@ Topics include: Services, Singletons, Localization (Locale), Plugins, Notificati
 
 ## See it in Action
 
-[www.spallinsonjs.com/example-apps/advanced](http://spallinsonjs.com/example-apps/advanced)
+[www.spallinsonjs.com/example-apps/advanced](https://spallinsonjs.com/example-apps/advanced)
 
 
 
@@ -63,7 +63,7 @@ You define key/value pairs for each language, and then use `[L:]` (in the view) 
 
 The `Login` component's view (`components/login/login.html`) has examples of using `[L:]`.
 
-The `Drawer` component's controller (`components/main-template/drawer/drawer.js`) has an example of using `_A_.Locale` in it's `logoutPressed()` method.
+The `Drawer` component's controller (`components/main-template/drawer/drawer.js`) has an example of using `_A_.Locale` in its `logoutPressed()` method.
 
 #### app/settings.js
 
@@ -77,7 +77,7 @@ Note: `condition` takes a function that returns a boolean.
 
 ###### _A_.Settings.services
 
-Services are "injected" into components (i.e. a component gets it's own instance of a service).
+Services are "injected" into components (i.e. a component gets its own instance of a service).
 
 You register services as shown in `settings.js`.
 
@@ -121,7 +121,7 @@ The `UserManager` singleton.
 
 #### spallinsonjs/*
 
-This is the v1.4.2 release of SPAllinsonJS. Nothing to see here.
+This is the v1.4.3 release of SPAllinsonJS. Nothing to see here.
 
 #### spallinsonjs-alert/*
 
@@ -151,7 +151,7 @@ Alert displays a banner notification to the user.
 
 The `Login` component displays an alert if you don't enter a username or password, try it out.
 
-The code for that is in it's controller's (`components/login/login.js`) `loginPressed` method.
+The code for that is in its controller's (`components/login/login.js`) `loginPressed` method.
 
 Note: `// guard` is a concept I use from iOS/Swift development. The idea is to handle all of the sad path upfront, then execute the happy path if all checks pass. There are tonnes of `// guard` in the SPAllinsonJS source code! The debug console is going to let you know if you pass null (etc.) into any of the `_A_` APIs :)
 
@@ -193,9 +193,9 @@ SPAllinsonJS allows your components to communicate with each other via "notifica
 
 The `Header` component's `hamburgerPressed()` method "fires" a notification with name `'HAMBURGER_PRESSED'`.
 
-The `Drawer` component "registers" to listen for a notification with name `'HAMBURGER_PRESSED'` and fires it's `handleHamburgerPressed` method in response.
+The `Drawer` component "registers" to listen for a notification with name `'HAMBURGER_PRESSED'` and fires its `handleHamburgerPressed` method in response.
 
-The `Drawer` component "deregisters" from all notifications in it's `dealloc()` method. The `Header` component does not need to deregister as it only fires notifications.
+The `Drawer` component "deregisters" from all notifications in its `dealloc()` method. The `Header` component does not need to deregister as it only fires notifications.
 
 
 
@@ -234,6 +234,8 @@ You can thus separate (or segment) your app into pieces!
 
 An example usage would to bundle all of the most used components into one bundle you preload, then keep other less used stuff like privacy, terms and conditions, etc. in another bundle(s) and only if the user ever visited them would they be downloaded :)
 
+SPAllinsonJS v1.4.3 adds html bundling support, which further helps optimize an application. Check the [official docs](https://spallinsonjs.com/#/home/developer/bundling) for more information.
+
 
 
 ## SPAllinsonJS Documentation
@@ -246,10 +248,10 @@ An example usage would to bundle all of the most used components into one bundle
 
 #### Docs
 
-All documentation can be found on the official site: [www.spallinsonjs.com](http://www.spallinsonjs.com)
+All documentation can be found on the official site: [www.spallinsonjs.com](https://www.spallinsonjs.com)
 
 
 
 ## Copyright
 
-All content &copy; [Chris J. Allinson](http://www.allinson.ca) 1996 - Present. All rights reserved.
+All content &copy; [Chris J. Allinson](https://www.allinson.ca) 1996 - Present. All rights reserved.
