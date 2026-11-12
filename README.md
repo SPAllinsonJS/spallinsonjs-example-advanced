@@ -125,17 +125,17 @@ This is the v1.4.3 release of SPAllinsonJS. Nothing to see here.
 
 #### spallinsonjs-alert/*
 
-This is the v1.2.1 release of SPAllinsonJS-Alert. Nothing to see here.
+This is the v1.2.2 release of SPAllinsonJS-Alert. Nothing to see here.
 
 #### spallinsonjs-lightbox/*
 
-This is the v1.2.8 release of SPAllinsonJS-Lightbox.
+This is the v1.2.9 release of SPAllinsonJS-Lightbox.
 
 Lightbox has a settings file (`spallinsonjs-lightbox/lightbox-settings.js`) which helps you override styles.
 
 #### spallinsonjs-storage/*
 
-This is the v1.4.0 release of SPAllinsonJS-Storage.
+This is the v1.4.1 release of SPAllinsonJS-Storage.
 
 Storage has a settings file (`spallinsonjs-storage/storage-settings.js`) that allows you to customize a message to the user if storage is not supported by their browser.
 
